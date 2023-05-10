@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gorjetas</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main oninput="update()">
+        <h1>Calculadora de Gorjetas</h1>
+        <section>
+            <div class="bill">
+                <label for="yourBill">Valor da Conta</label>
+                <input type="number" name="yourBill" id="yourBill" placeholder="Digite o valor da conta">
+                
+            </div>
+            <div class="space-between">
+                <label for="space-between">Gorjeta</label>
+                <input type="range" value= 0 class="range" id="percent">
+                <span id="tipPercent">0%</span>
+            </div>
+            <div class="space-between">
+                <span>Gorjeta</span>
+                <span id="tipValue"></span>
+            </div>
+            <hr>
+            <div class="space-betweenTotal"> 
+                <span id="totalWhitTip" class="totalWhitTip">Total</span>
+
+            </div>
+        </section>
+        
+        <section>
+            <div class="space-between">
+                <label for="splitDivision">Divisão</label>
+                <span class="splitValue" id="splitValue">1</span>
+            </div>
+            <input type="range" min="1" max="10" value="1" id="splitInput" class="range">
+        </section>
+        <section id="space-between">
+            <span id="billEach">Conta Para Cada</span>
+        </section>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>
